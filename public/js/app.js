@@ -60237,41 +60237,6 @@ var Hero = function (_Component) {
                             { href: "/contact/", className: "button medium secondary" },
                             "Contact me"
                         )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "row" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "ul",
-                            { "class": "ch-grid" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "li",
-                                null,
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "div",
-                                    { "class": "ch-item ch-img-1" },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "div",
-                                        { "class": "ch-info" },
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            "h3",
-                                            null,
-                                            "Use what you have"
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            "p",
-                                            null,
-                                            "by Angela Duncan ",
-                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                "a",
-                                                { href: "http://drbl.in/eOPF" },
-                                                "View on Dribbble"
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
                     )
                 )
             );
