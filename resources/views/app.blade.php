@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Shane Egan</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Include Styles -->
         <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
