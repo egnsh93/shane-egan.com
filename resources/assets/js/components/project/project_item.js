@@ -51,7 +51,6 @@ class ProjectItem extends Component {
                         </div>
                     </div>
                     <div className="back">
-                        <div className="close-details" onClick={ this.onClick }><i className="fa fa-times-circle" aria-hidden="true"></i></div>
                         <div className="featured-title">
                             <h3>Castlefrank Co-operative Homes</h3>
                         </div>
@@ -67,6 +66,7 @@ class ProjectItem extends Component {
                         <div className="featured-body">
                             <p>Shane built the website for the Housing Coop I manage and did an excellent job. He was knowledgeable, patient and offered suggestions that were helpful while paying attention to detail. I would use Shane's services again and would be pleased to recommend him to others.</p>
                         </div>
+                        <div className="close-details" onClick={ this.onClick }><i className="fa fa-times" aria-hidden="true"></i></div>
                     </div>
                 </div>
             </div>

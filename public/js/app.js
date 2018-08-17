@@ -61532,11 +61532,6 @@ var ProjectItem = function (_Component) {
                         { className: 'back' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
-                            { className: 'close-details', onClick: this.onClick },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-times-circle', 'aria-hidden': 'true' })
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
                             { className: 'featured-title' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'h3',
@@ -61597,6 +61592,11 @@ var ProjectItem = function (_Component) {
                                 null,
                                 'Shane built the website for the Housing Coop I manage and did an excellent job. He was knowledgeable, patient and offered suggestions that were helpful while paying attention to detail. I would use Shane\'s services again and would be pleased to recommend him to others.'
                             )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'close-details', onClick: this.onClick },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-times', 'aria-hidden': 'true' })
                         )
                     )
                 )
