@@ -62,6 +62,10 @@ h1 {
     }
 }
 
+.toggle:hover, .toggle.active, .toggle.active:hover {
+    color: $extra-light;
+}
+
 #menu {
     position: relative;
     background-color: $dark;
@@ -149,6 +153,10 @@ h1 {
 
     @media only screen and (min-width: $tablet-break) {
         width: 700px;
+    }
+
+    @media only screen and (min-width: $desktop-break) {
+        width: 900px;
     }
 }
 
@@ -261,6 +269,10 @@ h1 {
     }
     @media only screen and (min-width: $tablet-break) {
         font-size: 38px;
+        height: 820px;
+    }
+    @media only screen and (min-width: $desktop-break) {
+        height: 800px;
     }
 }
 
@@ -277,6 +289,7 @@ h1 {
 
 .profile-title {
     font-size: 32px;
+    font-family: "BentonBold";
     color: $extra-light;
     letter-spacing: 1px;
     line-height: 35px;
@@ -288,7 +301,7 @@ h1 {
 }
 
 .profile-blurb {
-    font-family: monospace;
+    font-family: "BentonRegular";
     color: $light;
     font-size: 20px;
     letter-spacing: 2px;
@@ -299,13 +312,18 @@ h1 {
     @media only screen and (min-width: $tablet-break) {
         padding: 0 5px;
         font-size: 26px;
-        margin: 25px 0;
+        margin: 40px 0;
         line-height: 50px;
+    }
+
+    @media only screen and (min-width: $desktop-break) {
+        margin: 40px 0;
     }
 }
 
 .profile .button {
     margin: 15px 0;
+    font-family: "BentonBold";
 }
 
 /* Services */
@@ -318,6 +336,7 @@ h1 {
     background-color: $extra-light;
     h2 {
         color: $extra-dark;
+        font-family: "BentonBold";
         padding-bottom: 0;
     }
     .underline {
@@ -350,22 +369,46 @@ h1 {
         .fa-paint-brush {
             color: $primary;
             font-size: 48px;
+
+            @media only screen and (min-width: $tablet-break) {
+                font-size: 38px;
+            }
         }
         .fa-mobile {
             color: $secondary;
             font-size: 48px;
+
+            @media only screen and (min-width: $tablet-break) {
+                font-size: 38px;
+            }
         }
         .fa-folder-open {
             color: $tertiary;
             font-size: 48px;
+
+            @media only screen and (min-width: $tablet-break) {
+                font-size: 38px;
+            }
         }
         h3 {
-            padding: 25px 0;
+            margin: 20px 0;
+
+            @media only screen and (min-width: $tablet-break) {
+                font-size: 16px;
+            }
+
+            @media only screen and (min-width: $desktop-break) {
+                font-size: 18px;
+            }
         }
         p {
             font-size: 14px;
             color: #555555;
             line-height: 16px;
+
+            @media only screen and (min-width: $tablet-break) {
+                font-size: 14px;
+            }
         }
         .highlight {
             position: absolute;
@@ -410,13 +453,13 @@ h1 {
 .featured {
     position: relative;
     width: 100%;
-    height: 880px;
+    height: 920px;
     padding: 90px 0;
     background: url('/assets/images/featured_bg.jpg') no-repeat;
     background-size: cover;
 
     @media only screen and (min-width: $tablet-break) {
-        height: 600px;
+        height: 640px;
     }
 
     .underline {
@@ -438,6 +481,8 @@ h1 {
     }
     .featured-details {
         h3 {
+            font-family: "BentonMedium";
+            font-size: 20px;
             color: $extra-light;
             text-align: left;
             margin: 60px 0 40px 0;
@@ -456,12 +501,14 @@ h1 {
         @extend %mobile_full;
 
         @media only screen and (min-width: $tablet-break) {
-            padding-left: 100px;
+            padding-left: 80px;
         }
 
     }
     .featured-buttons {
         float: left;
+        font-family: "BentonMedium";
+        font-size: 14px;
         @media only screen and (min-width: $desktop-break) {
             float: right;
         }
@@ -482,8 +529,13 @@ h1 {
 .callout {
     position: relative;
     width: 100%;
-    height: 224px;
+    height: 340px;
     padding: 90px 0;
+
+    @media only screen and (min-width: $tablet-break) {
+        height: 224px;
+    }
+
     .container .row {
         display: flex;
         align-items: center;
@@ -498,6 +550,7 @@ h1 {
         @extend %mobile_full;
     }
     .callout-left p {
+        font-family: "BentonMedium";
         font-size: 26px;
         font-weight: bold;
         color: $dark;
@@ -506,7 +559,7 @@ h1 {
             text-align: center;
         }
         @media only screen and (min-width: $tablet-break) and (max-width: $desktop-break) {
-            font-size: 21px;
+            font-size: 23px;
         }
     }
     .callout-right {
@@ -514,6 +567,7 @@ h1 {
     }
     .callout-right .button {
         float: right;
+        font-family: "BentonMedium";
         @media only screen and (max-width: $tablet-break) {
             float: none;
             display: inline-block;
@@ -525,7 +579,12 @@ h1 {
 .testimonials {
     position: relative;
     width: 100%;
-    height: 449px;
+    height: 600px;
+
+    @media only screen and (min-width: $tablet-break) {
+        height: 500px;
+    }
+
     padding: 90px 0;
     background: url('/assets/images/testimonials_bg.jpg') no-repeat;
     background-size: cover;
@@ -612,6 +671,7 @@ h1 {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
+    padding: 15px !important;
 }
 
 .button.extra-light {
@@ -665,19 +725,25 @@ h1 {
 h2 {
     padding-bottom: 90px;
     color: $extra-light;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 30px;
+    letter-spacing: 2;
     font-weight: bold;
     text-align: center;
 }
 
 h3 {
     font-size: 18px;
-    font-weight: bold;
     color: $dark;
+    font-family: "BentonBold";
     text-align: center;
 }
 
+/* Links */
+
+a:hover {
+    text-decoration: none;
+}
 /* Colours */
 
 .highlight-primary {

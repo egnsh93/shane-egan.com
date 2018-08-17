@@ -11,6 +11,23 @@ Version:	1.0
 
 /* Color Palette */
 
+/* Fonts */
+
+@font-face {
+  font-family: BentonRegular;
+  src: url("/assets/fonts/BentonSans_Regular.otf");
+}
+
+@font-face {
+  font-family: BentonMedium;
+  src: url("/assets/fonts/BentonSans_Medium.otf");
+}
+
+@font-face {
+  font-family: BentonBold;
+  src: url("/assets/fonts/BentonSans_Bold.otf");
+}
+
 /* Resets */
 
 * {
@@ -24,7 +41,7 @@ Version:	1.0
 /* Body */
 
 body {
-  font: 1em/1.5em 'Source Sans Pro', sans-serif;
+  font-family: "BentonRegular";
   color: #555555;
 }
 
@@ -227,6 +244,12 @@ h1 {
   }
 }
 
+.toggle:hover,
+.toggle.active,
+.toggle.active:hover {
+  color: #ffffff;
+}
+
 #menu {
   position: relative;
   background-color: #252525;
@@ -333,6 +356,14 @@ h1 {
   .front,
   .back {
     width: 700px;
+  }
+}
+
+@media only screen and (min-width: 940px) {
+  .flip-container,
+  .front,
+  .back {
+    width: 900px;
   }
 }
 
@@ -459,6 +490,13 @@ h1 {
 @media only screen and (min-width: 725px) {
   .hero {
     font-size: 38px;
+    height: 820px;
+  }
+}
+
+@media only screen and (min-width: 940px) {
+  .hero {
+    height: 800px;
   }
 }
 
@@ -475,6 +513,7 @@ h1 {
 
 .profile-title {
   font-size: 32px;
+  font-family: "BentonBold";
   color: #ffffff;
   letter-spacing: 1px;
   line-height: 35px;
@@ -488,7 +527,7 @@ h1 {
 }
 
 .profile-blurb {
-  font-family: monospace;
+  font-family: "BentonRegular";
   color: #f5f5f5;
   font-size: 20px;
   letter-spacing: 2px;
@@ -501,13 +540,20 @@ h1 {
   .profile-blurb {
     padding: 0 5px;
     font-size: 26px;
-    margin: 25px 0;
+    margin: 40px 0;
     line-height: 50px;
+  }
+}
+
+@media only screen and (min-width: 940px) {
+  .profile-blurb {
+    margin: 40px 0;
   }
 }
 
 .profile .button {
   margin: 15px 0;
+  font-family: "BentonBold";
 }
 
 /* Services */
@@ -522,6 +568,7 @@ h1 {
 
 .services h2 {
   color: #000000;
+  font-family: "BentonBold";
   padding-bottom: 0;
 }
 
@@ -562,9 +609,21 @@ h1 {
   font-size: 48px;
 }
 
+@media only screen and (min-width: 725px) {
+  .services .service-box .fa-paint-brush {
+    font-size: 38px;
+  }
+}
+
 .services .service-box .fa-mobile {
   color: #f14440;
   font-size: 48px;
+}
+
+@media only screen and (min-width: 725px) {
+  .services .service-box .fa-mobile {
+    font-size: 38px;
+  }
 }
 
 .services .service-box .fa-folder-open {
@@ -572,14 +631,38 @@ h1 {
   font-size: 48px;
 }
 
+@media only screen and (min-width: 725px) {
+  .services .service-box .fa-folder-open {
+    font-size: 38px;
+  }
+}
+
 .services .service-box h3 {
-  padding: 25px 0;
+  margin: 20px 0;
+}
+
+@media only screen and (min-width: 725px) {
+  .services .service-box h3 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 940px) {
+  .services .service-box h3 {
+    font-size: 18px;
+  }
 }
 
 .services .service-box p {
   font-size: 14px;
   color: #555555;
   line-height: 16px;
+}
+
+@media only screen and (min-width: 725px) {
+  .services .service-box p {
+    font-size: 14px;
+  }
 }
 
 .services .service-box .highlight {
@@ -629,7 +712,7 @@ h1 {
 .featured {
   position: relative;
   width: 100%;
-  height: 880px;
+  height: 920px;
   padding: 90px 0;
   background: url("/assets/images/featured_bg.jpg") no-repeat;
   background-size: cover;
@@ -637,7 +720,7 @@ h1 {
 
 @media only screen and (min-width: 725px) {
   .featured {
-    height: 600px;
+    height: 640px;
   }
 }
 
@@ -659,6 +742,8 @@ h1 {
 }
 
 .featured .featured-details h3 {
+  font-family: "BentonMedium";
+  font-size: 20px;
   color: #ffffff;
   text-align: left;
   margin: 60px 0 40px 0;
@@ -679,12 +764,14 @@ h1 {
 
 @media only screen and (min-width: 725px) {
   .featured .featured-details {
-    padding-left: 100px;
+    padding-left: 80px;
   }
 }
 
 .featured .featured-buttons {
   float: left;
+  font-family: "BentonMedium";
+  font-size: 14px;
   margin-top: 40px;
 }
 
@@ -709,8 +796,14 @@ h1 {
 .callout {
   position: relative;
   width: 100%;
-  height: 224px;
+  height: 340px;
   padding: 90px 0;
+}
+
+@media only screen and (min-width: 725px) {
+  .callout {
+    height: 224px;
+  }
 }
 
 .callout .container .row {
@@ -730,6 +823,7 @@ h1 {
 }
 
 .callout .callout-left p {
+  font-family: "BentonMedium";
   font-size: 26px;
   font-weight: bold;
   color: #252525;
@@ -744,7 +838,7 @@ h1 {
 
 @media only screen and (min-width: 725px) and (max-width: 940px) {
   .callout .callout-left p {
-    font-size: 21px;
+    font-size: 23px;
   }
 }
 
@@ -754,6 +848,7 @@ h1 {
 
 .callout .callout-right .button {
   float: right;
+  font-family: "BentonMedium";
 }
 
 @media only screen and (max-width: 725px) {
@@ -767,10 +862,16 @@ h1 {
 .testimonials {
   position: relative;
   width: 100%;
-  height: 449px;
+  height: 600px;
   padding: 90px 0;
   background: url("/assets/images/testimonials_bg.jpg") no-repeat;
   background-size: cover;
+}
+
+@media only screen and (min-width: 725px) {
+  .testimonials {
+    height: 500px;
+  }
 }
 
 .testimonials .underline {
@@ -889,6 +990,7 @@ h1 {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+  padding: 15px !important;
 }
 
 .button.extra-light {
@@ -946,17 +1048,24 @@ h1 {
 h2 {
   padding-bottom: 90px;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 26px;
   line-height: 30px;
+  letter-spacing: 2;
   font-weight: bold;
   text-align: center;
 }
 
 h3 {
   font-size: 18px;
-  font-weight: bold;
   color: #252525;
+  font-family: "BentonBold";
   text-align: center;
+}
+
+/* Links */
+
+a:hover {
+  text-decoration: none;
 }
 
 /* Colours */
