@@ -1,19 +1,7 @@
-/* Change header class based on position */
-$(window).scroll(function () {
-    var pos = $(this).scrollTop(),
-        contentPos = $('.wrap').offset().top,
-        headerOffset = $('.header').outerHeight();
-
-    if (pos >= contentPos - headerOffset) {
-        $('.header').addClass('transform');
-    } else {
-        $('.header').removeClass('transform');
-    }
-});
-
 $(document).ready(function () {
     $('.toggle').bigSlide({
-        'side': 'right'
+        'side': 'right',
+        'easyClose': 'true'
     });
 
     $('.toggle').click(function () {

@@ -18,5 +18,8 @@
     "jquery": "~2.1.4",
     "crumpet": "~1.0.2",
     "bigSlide": "~0.9.1"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4"
   }
 }

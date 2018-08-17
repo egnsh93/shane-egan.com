@@ -175,92 +175,6 @@ h1 {
   clear: both;
 }
 
-.profile-img {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 50px auto;
-  border: 2px solid #3d4c53;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  background: url("/assets/images/mugshot_2.png") no-repeat;
-}
-
-.profile-title {
-  font-size: 38px;
-  color: #ffffff;
-  letter-spacing: 1px;
-  line-height: 35px;
-}
-
-.profile-blurb {
-  font-family: monospace;
-  color: #f5f5f5;
-  font-size: 24px;
-  letter-spacing: 2px;
-  line-height: 30px;
-  margin-bottom: 20px;
-}
-
-.profile .button {
-  margin-top: 40px;
-}
-
-.profile p:nth-child(3) {
-  width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  -webkit-animation: type 2s steps(60, end) forwards;
-          animation: type 2s steps(60, end) forwards;
-}
-
-.profile p:nth-child(4) {
-  width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  -webkit-animation: type 2s steps(60, end) forwards;
-          animation: type 2s steps(60, end) forwards;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-span.cursor {
-  -webkit-animation: blink 1s infinite;
-          animation: blink 1s infinite;
-}
-
-@-webkit-keyframes type {
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes type {
-  to {
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes blink {
-  to {
-    opacity: .0;
-  }
-}
-
-@keyframes blink {
-  to {
-    opacity: .0;
-  }
-}
-
-::-moz-selection {
-  background: #000;
-}
-
-::selection {
-  background: #000;
-}
-
 /* Top */
 
 .header {
@@ -393,12 +307,142 @@ span.cursor {
   color: #000000;
 }
 
+/* Flip Container */
+
+/* entire container, keeps perspective */
+
+.flip-container {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.flip-container.flip .flipper {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+  width: 290px;
+  height: 800px;
+}
+
+@media only screen and (min-width: 725px) {
+  .flip-container,
+  .front,
+  .back {
+    width: 700px;
+  }
+}
+
+/* flip speed goes here */
+
+.flipper {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+
+.back {
+  text-align: left;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.back i {
+  float: right;
+  margin-right: 30px;
+  padding-left: 30px;
+  font-size: 32px;
+  color: #ffffff;
+  z-index: 9999;
+}
+
+.back .close-details {
+  cursor: pointer;
+}
+
+.back .featured-title {
+  margin-bottom: 20px;
+}
+
+.back .featured-title h3 {
+  text-align: left;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.back .featured-meta {
+  margin: 30px 0;
+}
+
+.back .featured-meta h4 {
+  text-align: left;
+  font-size: 16px;
+  color: #f5f5f5;
+}
+
+.back .featured-meta ul {
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+.back .featured-meta li {
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.back .featured-meta .label-design {
+  background-color: #70b7b9;
+}
+
+.back .featured-meta .label-development {
+  background-color: #f14440;
+}
+
+.back .featured-meta .label-cms {
+  background-color: #3d4c53;
+}
+
+.back .featured-body {
+  color: #f5f5f5;
+  font-size: 14px;
+  line-height: 25px;
+}
+
 /* Hero Banner */
 
 .hero {
+  position: relative;
   width: 100%;
   text-align: center;
-  height: 799px;
+  height: 860px;
   background: #70b7b9;
 }
 
@@ -412,9 +456,66 @@ span.cursor {
   padding: 120px 0 0 0;
 }
 
+@media only screen and (min-width: 725px) {
+  .hero {
+    font-size: 38px;
+  }
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 50px auto;
+  border: 2px solid #3d4c53;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  background: url("/assets/images/mugshot_2.png") no-repeat;
+}
+
+.profile-title {
+  font-size: 32px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  line-height: 35px;
+  margin-bottom: 35px;
+}
+
+@media only screen and (min-width: 725px) {
+  .profile-title {
+    font-size: 38px;
+  }
+}
+
+.profile-blurb {
+  font-family: monospace;
+  color: #f5f5f5;
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 40px;
+  margin-bottom: 25px;
+  padding: 0 0;
+}
+
+@media only screen and (min-width: 725px) {
+  .profile-blurb {
+    padding: 0 5px;
+    font-size: 26px;
+    margin: 25px 0;
+    line-height: 50px;
+  }
+}
+
+.profile .button {
+  margin: 15px 0;
+}
+
 /* Services */
 
 .services {
+  position: relative;
+  width: 100%;
+  min-height: 548px;
   padding: 90px 0;
   background-color: #ffffff;
 }
@@ -526,9 +627,18 @@ span.cursor {
 /* Featured Project */
 
 .featured {
+  position: relative;
+  width: 100%;
+  height: 880px;
   padding: 90px 0;
   background: url("/assets/images/featured_bg.jpg") no-repeat;
   background-size: cover;
+}
+
+@media only screen and (min-width: 725px) {
+  .featured {
+    height: 600px;
+  }
 }
 
 .featured .underline {
@@ -546,12 +656,6 @@ span.cursor {
 .featured .featured-preview img {
   max-width: 100%;
   display: inline-block;
-}
-
-@media only screen and (min-width: 725px) {
-  .featured .featured-details {
-    padding-left: 100px;
-  }
 }
 
 .featured .featured-details h3 {
@@ -573,6 +677,12 @@ span.cursor {
   text-align: justify;
 }
 
+@media only screen and (min-width: 725px) {
+  .featured .featured-details {
+    padding-left: 100px;
+  }
+}
+
 .featured .featured-buttons {
   float: left;
   margin-top: 40px;
@@ -584,8 +694,12 @@ span.cursor {
   }
 }
 
-.featured .featured-buttons .button:not(:nth-of-type(1)) {
+.featured .featured-buttons .button:not(:nth-child(1)) {
   margin-left: 20px;
+}
+
+.featured .featured-buttons .button {
+  cursor: pointer;
 }
 
 /* Services */
@@ -593,6 +707,9 @@ span.cursor {
 /* Callout */
 
 .callout {
+  position: relative;
+  width: 100%;
+  height: 224px;
   padding: 90px 0;
 }
 
@@ -648,6 +765,9 @@ span.cursor {
 }
 
 .testimonials {
+  position: relative;
+  width: 100%;
+  height: 449px;
   padding: 90px 0;
   background: url("/assets/images/testimonials_bg.jpg") no-repeat;
   background-size: cover;
@@ -684,7 +804,9 @@ span.cursor {
 /* Footer */
 
 .footer {
+  position: relative;
   width: 100%;
+  height: 153px;
   padding: 60px 0;
   background-color: #f5f5f5;
 }

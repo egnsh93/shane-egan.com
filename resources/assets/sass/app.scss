@@ -25,73 +25,6 @@ h1 {
     clear: both;
 }
 
-.profile-img {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 50px auto;
-    border: 2px solid #3d4c53;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    background: url('/assets/images/mugshot_2.png') no-repeat;
-}
-
-.profile-title {
-    font-size: 38px;
-    color: $extra-light;
-    letter-spacing: 1px;
-    line-height: 35px;
-}
-
-.profile-blurb {
-    font-family: monospace;
-    color: $light;
-    font-size: 24px;
-    letter-spacing: 2px;
-    line-height: 30px;
-    margin-bottom: 20px;
-}
-
-.profile .button {
-    margin-top: 40px;
-}
-
-.profile p:nth-child(3) {
-    width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: type 2s steps(60, end) forwards;
-}
-
-.profile p:nth-child(4) {
-    width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: type 2s steps(60, end) forwards;
-    animation-delay: 2s;
-}
-
-span.cursor {
-    animation: blink 1s infinite;
-}
-
-@keyframes type {
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    to {
-        opacity: .0;
-    }
-}
-
-::selection {
-    background: #000;
-}
-
-
 /* Top */
 
 .header {
@@ -199,12 +132,124 @@ span.cursor {
     }
 }
 
+/* Flip Container */
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+
+.flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 290px;
+    height: 800px;
+
+    @media only screen and (min-width: $tablet-break) {
+        width: 700px;
+    }
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+
+    text-align: left;
+    transform: rotateY(180deg);
+
+    i {
+        float: right;
+        margin-right: 30px;
+        padding-left: 30px;
+        font-size: 32px;
+        color: $extra-light;
+        z-index: 9999;
+    }
+
+    .close-details {
+        cursor: pointer;
+    }
+
+    .featured-title {
+        margin-bottom: 20px;
+
+        h3 {
+            text-align: left;
+            font-size: 24px;
+            color: $extra-light;
+        }
+    }
+
+    .featured-meta {
+        margin: 30px 0;
+
+        h4 {
+            text-align: left;
+            font-size: 16px;
+            color: $light;
+        }
+
+        ul {
+            margin-top: 15px;
+            list-style-type: none;
+        }
+
+        li {
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .label-design {
+            background-color: $primary;
+        }
+
+        .label-development {
+            background-color: $secondary;
+        }
+
+        .label-cms {
+            background-color: $tertiary;
+        }
+    }
+
+    .featured-body {
+        color: $light;
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
 /* Hero Banner */
 
 .hero {
+    position: relative;
     width: 100%;
     text-align: center;
-    height: 799px;
+    height: 860px;
     background: #70b7b9;
     h1 {
         color: #fff;
@@ -214,11 +259,61 @@ span.cursor {
         display: inline-block;
         padding: 120px 0 0 0;
     }
+    @media only screen and (min-width: $tablet-break) {
+        font-size: 38px;
+    }
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 50px auto;
+    border: 2px solid #3d4c53;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    background: url('/assets/images/mugshot_2.png') no-repeat;
+}
+
+.profile-title {
+    font-size: 32px;
+    color: $extra-light;
+    letter-spacing: 1px;
+    line-height: 35px;
+    margin-bottom: 35px;
+
+    @media only screen and (min-width: $tablet-break) {
+        font-size: 38px;
+    }
+}
+
+.profile-blurb {
+    font-family: monospace;
+    color: $light;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    margin-bottom: 25px;
+    padding: 0 0;
+
+    @media only screen and (min-width: $tablet-break) {
+        padding: 0 5px;
+        font-size: 26px;
+        margin: 25px 0;
+        line-height: 50px;
+    }
+}
+
+.profile .button {
+    margin: 15px 0;
 }
 
 /* Services */
 
 .services {
+    position: relative;
+    width: 100%;
+    min-height: 548px;
     padding: 90px 0;
     background-color: $extra-light;
     h2 {
@@ -313,9 +408,17 @@ span.cursor {
 /* Featured Project */
 
 .featured {
+    position: relative;
+    width: 100%;
+    height: 880px;
     padding: 90px 0;
     background: url('/assets/images/featured_bg.jpg') no-repeat;
     background-size: cover;
+
+    @media only screen and (min-width: $tablet-break) {
+        height: 600px;
+    }
+
     .underline {
         width: 100px;
         line-height: 18px;
@@ -334,9 +437,6 @@ span.cursor {
         }
     }
     .featured-details {
-        @media only screen and (min-width: $tablet-break) {
-            padding-left: 100px;
-        }
         h3 {
             color: $extra-light;
             text-align: left;
@@ -354,6 +454,11 @@ span.cursor {
         @extend %grid-7;
         @extend %tablet_grid-7;
         @extend %mobile_full;
+
+        @media only screen and (min-width: $tablet-break) {
+            padding-left: 100px;
+        }
+
     }
     .featured-buttons {
         float: left;
@@ -361,8 +466,11 @@ span.cursor {
             float: right;
         }
         margin-top: 40px;
-        .button:not(:nth-of-type(1)) {
+        .button:not(:nth-child(1)) {
             margin-left: 20px;
+        }
+        .button {
+            cursor: pointer;
         }
     }
 }
@@ -372,6 +480,9 @@ span.cursor {
 /* Callout */
 
 .callout {
+    position: relative;
+    width: 100%;
+    height: 224px;
     padding: 90px 0;
     .container .row {
         display: flex;
@@ -412,6 +523,9 @@ span.cursor {
 }
 
 .testimonials {
+    position: relative;
+    width: 100%;
+    height: 449px;
     padding: 90px 0;
     background: url('/assets/images/testimonials_bg.jpg') no-repeat;
     background-size: cover;
@@ -441,7 +555,9 @@ span.cursor {
 /* Footer */
 
 .footer {
+    position: relative;
     width: 100%;
+    height: 153px;
     padding: 60px 0;
     background-color: $light;
     .container .row {
