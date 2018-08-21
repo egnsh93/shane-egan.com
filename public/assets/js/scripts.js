@@ -4,10 +4,25 @@ $(document).ready(function () {
         'easyClose': 'true'
     });
 
-    $('.toggle').click(function () {
-        $(this).find('i').toggleClass('fa-close');
-        $(this).find('i').toggleClass('fa-bars');
+    $(document).click(function() {
+        isMenuActive();
+
     });
+
+    $('.toggle').click(function () {
+        isMenuActive();
+    });
+
+    function isMenuActive() {
+        var menuIsActive = $('.toggle').hasClass('active');
+        if (menuIsActive) {
+            $('.toggle').find('i').removeClass('fa-bars');
+            $('.toggle').find('i').addClass('fa-close');
+        } else {
+            $('.toggle').find('i').removeClass('fa-close');
+            $('.toggle').find('i').addClass('fa-bars');
+        }
+    }
 
     // Add smooth scrolling to all links
     $("nav a").on('click', function (event) {

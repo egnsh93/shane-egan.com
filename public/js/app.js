@@ -37937,11 +37937,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hero__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__section__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__service__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__project_project_carousel__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__project_project_item__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__callout__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__testimonials__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__footer__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__project_project_item__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__callout__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__testimonials__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__footer__ = __webpack_require__(114);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37949,7 +37948,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 
 
 
@@ -38010,14 +38008,39 @@ var App = function (_Component) {
                         { name: 'featured', id: 'projects', heading: 'Some of my', underline: 'projects' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
-                            { className: 'row' },
+                            { className: 'row gallery' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'featured-1', className: 'control-operator' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'featured-2', className: 'control-operator' }),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_6__project_project_carousel__["a" /* default */],
-                                { src: '' },
+                                'figure',
+                                { className: 'item' },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_7__project_project_item__["a" /* default */],
-                                    { name: 'Castlefrank Co-operative Homes', link: 'http://shane-egan.com', detailUrl: 'http://shane-egan.com' },
+                                    __WEBPACK_IMPORTED_MODULE_6__project_project_item__["a" /* default */],
+                                    { name: 'Castlefrank Co-operative Homes', link: 'http://shane-egan.com' },
                                     'Castlefrank Co-operative Homes wanted a website that would engage and educate their audience. What they received was a fully responsive and optimized website built using HTML, XML, and PHP. Check out the details or view their website live via the links below.'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'figure',
+                                { className: 'item' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_6__project_project_item__["a" /* default */],
+                                    { name: 'TBD', link: 'http://shane-egan.com' },
+                                    'Up and coming personal project'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'controls' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#featured-1', 'class': 'control-button' },
+                                    '\u2022'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#featured-2', 'class': 'control-button' },
+                                    '\u2022'
                                 )
                             )
                         )
@@ -38026,7 +38049,7 @@ var App = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_4__section__["a" /* default */],
                         { name: 'callout', id: 'contact' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_8__callout__["a" /* default */],
+                            __WEBPACK_IMPORTED_MODULE_7__callout__["a" /* default */],
                             { link: '/contact/', buttonText: 'Get in touch' },
                             'Interested in working together?'
                         )
@@ -38034,10 +38057,39 @@ var App = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_4__section__["a" /* default */],
                         { name: 'testimonials', id: 'testimonials', heading: 'What my clients are', underline: 'saying' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__testimonials__["a" /* default */], null)
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'row gallery' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'testimonial-1', className: 'control-operator' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'testimonial-2', className: 'control-operator' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'figure',
+                                { className: 'item' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__testimonials__["a" /* default */], null)
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'figure',
+                                { className: 'item' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__testimonials__["a" /* default */], null)
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'controls' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#testimonial-1', 'class': 'control-button' },
+                                    '\u2022'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#testimonial-2', 'class': 'control-button' },
+                                    '\u2022'
+                                )
+                            )
+                        )
                     )
                 ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__footer__["a" /* default */], null)
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__footer__["a" /* default */], null)
             );
         }
     }]);
@@ -61383,48 +61435,7 @@ var Service = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Service);
 
 /***/ }),
-/* 110 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-var ProjectCarousel = function (_Component) {
-    _inherits(ProjectCarousel, _Component);
-
-    function ProjectCarousel() {
-        _classCallCheck(this, ProjectCarousel);
-
-        return _possibleConstructorReturn(this, (ProjectCarousel.__proto__ || Object.getPrototypeOf(ProjectCarousel)).apply(this, arguments));
-    }
-
-    _createClass(ProjectCarousel, [{
-        key: "render",
-        value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "project-carousel" },
-                this.props.children
-            );
-        }
-    }]);
-
-    return ProjectCarousel;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (ProjectCarousel);
-
-/***/ }),
+/* 110 */,
 /* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -61532,6 +61543,11 @@ var ProjectItem = function (_Component) {
                         { className: 'back' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
+                            { className: 'close-details', onClick: this.onClick },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-times', 'aria-hidden': 'true' })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
                             { className: 'featured-title' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'h3',
@@ -61560,7 +61576,7 @@ var ProjectItem = function (_Component) {
                                     null,
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         'span',
-                                        { 'class': 'label label-design' },
+                                        { className: 'label label-design' },
                                         'Design'
                                     )
                                 ),
@@ -61569,7 +61585,7 @@ var ProjectItem = function (_Component) {
                                     null,
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         'span',
-                                        { 'class': 'label label-development' },
+                                        { className: 'label label-development' },
                                         'Development'
                                     )
                                 ),
@@ -61578,7 +61594,7 @@ var ProjectItem = function (_Component) {
                                     null,
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         'span',
-                                        { 'class': 'label label-cms' },
+                                        { className: 'label label-cms' },
                                         'CMS'
                                     )
                                 )
@@ -61592,11 +61608,6 @@ var ProjectItem = function (_Component) {
                                 null,
                                 'Shane built the website for the Housing Coop I manage and did an excellent job. He was knowledgeable, patient and offered suggestions that were helpful while paying attention to detail. I would use Shane\'s services again and would be pleased to recommend him to others.'
                             )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'close-details', onClick: this.onClick },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-times', 'aria-hidden': 'true' })
                         )
                     )
                 )
@@ -61699,7 +61710,7 @@ var Testimonials = function (_Component) {
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { className: "row" },
+                null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "p",
                     { className: "testimonial-body" },

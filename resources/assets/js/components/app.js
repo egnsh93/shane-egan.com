@@ -4,7 +4,6 @@ import Header from './header';
 import Hero from './hero';
 import Section from './section';
 import Service from './service';
-import ProjectCarousel from './project/project_carousel';
 import ProjectItem from './project/project_item';
 import Callout from './callout';
 import Testimonials from './testimonials';
@@ -25,19 +24,43 @@ class App extends Component {
                         </div>
                     </Section>
                     <Section name="featured" id="projects" heading="Some of my" underline="projects">
-                        <div className="row">
-                            <ProjectCarousel src="">
-                                <ProjectItem name="Castlefrank Co-operative Homes" link="http://shane-egan.com" detailUrl="http://shane-egan.com">
+                        <div className="row gallery">
+                            <div id="featured-1" className="control-operator"></div>
+                            <div id="featured-2" className="control-operator"></div>
+                            <figure className="item">
+                                <ProjectItem name="Castlefrank Co-operative Homes" link="http://shane-egan.com">
                                     Castlefrank Co-operative Homes wanted a website that would engage and educate their audience. What they received was a fully responsive and optimized website built using HTML, XML, and PHP. Check out the details or view their website live via the links below.
                                 </ProjectItem>
-                            </ProjectCarousel>
+                            </figure>
+                            <figure className="item">
+                                <ProjectItem name="TBD" link="http://shane-egan.com">
+                                    Up and coming personal project
+                                </ProjectItem>
+                            </figure>
+                            <div className="controls">
+                                <a href="#featured-1" class="control-button">•</a>
+                                <a href="#featured-2" class="control-button">•</a>
+                            </div>
                         </div>
                     </Section>
                     <Section name="callout" id="contact">
                         <Callout link="/contact/" buttonText="Get in touch">Interested in working together?</Callout>
                     </Section>
                     <Section name="testimonials" id="testimonials" heading="What my clients are" underline="saying">
-                        <Testimonials />
+                        <div className="row gallery">
+                            <div id="testimonial-1" className="control-operator"></div>
+                            <div id="testimonial-2" className="control-operator"></div>
+                            <figure className="item">
+                                <Testimonials />
+                            </figure>
+                            <figure className="item">
+                                <Testimonials />
+                            </figure>
+                            <div className="controls">
+                                <a href="#testimonial-1" class="control-button">•</a>
+                                <a href="#testimonial-2" class="control-button">•</a>
+                            </div>
+                        </div>
                     </Section>
                 </div>
                 <Footer />
